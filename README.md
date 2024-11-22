@@ -58,5 +58,3 @@ This Dockerized system was created as an **extra step** to enhance the original 
 By Dockerizing both the **frontend** and **backend** and integrating a **MongoDB container**, this project is not only functional but also portable and easy to maintain.
 
 ---
-
-Feel free to reach out if you have any feedback or questions about this implementation!
