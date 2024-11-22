@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "120f2c0c-2675-4bcd-bb8c-ef88424670f3",
+		"name": "Syte",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14711195",
+		"_collection_link": "https://dark-space-387252.postman.co/workspace/Oz-main-workspace~7381a718-6d80-4ca1-8d49-e22138e7765f/collection/14711195-120f2c0c-2675-4bcd-bb8c-ef88424670f3?action=share&source=collection_link&creator=14711195"
+	},
+	"item": [
+		{
+			"name": "Get catalogs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3033/catalogs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3033",
+					"path": [
+						"catalogs"
+					]
+				},
+				"description": "Generated from cURL: curl -X GET http://localhost:3033/catalogs\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Create catalog",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Sport Catalog\",\n  \"vertical\": \"home\",\n  \"isPrimary\": true,\n  \"locales\": [\"en_US\", \"en_CA\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3033/api/catalogs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3033",
+					"path": [
+						"api",
+						"catalogs"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST http://localhost:3033/catalogs \\\n-H \"Content-Type: application/json\" \\\n-d '{\n  \"name\": \"Fashion Catalog\",\n  \"vertical\": \"fashion\",\n  \"isPrimary\": true,\n  \"locales\": [\"en_US\", \"en_CA\"]\n}'\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Update catalog",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n    \"vertical\": \"home\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3033/catalogs/673ef6db31f87277db1c8ef5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3033",
+					"path": [
+						"catalogs",
+						"673ef6db31f87277db1c8ef5"
+					]
+				},
+				"description": "Generated from cURL: curl -X PUT http://localhost:3033/catalogs/<catalog_id> \\\n-H \"Content-Type: application/json\" \\\n-d '{\n  \"isPrimary\": false,\n  \"locales\": [\"en_US\", \"es_ES\"]\n}'\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete catalog",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3033/catalogs/673ef204d4f2e469cef8620c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3033",
+					"path": [
+						"catalogs",
+						"673ef204d4f2e469cef8620c"
+					]
+				},
+				"description": "Generated from cURL: curl -X DELETE http://localhost:3033/catalogs/<catalog_id>\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Get with filter by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3033/catalogs?name=fash",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3033",
+					"path": [
+						"catalogs"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "fash"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X GET \"http://localhost:3033/catalogs?name=Fashion\"\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Get with filter by Locale",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3033/catalogs?multiLocale=true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3033",
+					"path": [
+						"catalogs"
+					],
+					"query": [
+						{
+							"key": "multiLocale",
+							"value": "true"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X GET \"http://localhost:3033/catalogs?multiLocale=true\"\n"
+			},
+			"response": []
+		},
+		{
+			"name": "manual-indexing",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3033/catalogs/manual-indexing",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3033",
+					"path": [
+						"catalogs",
+						"manual-indexing"
+					]
+				},
+				"description": "Generated from cURL: curl -X GET http://localhost:3033/catalogs/manual-indexing\n"
+			},
+			"response": []
+		}
+	]
+}
